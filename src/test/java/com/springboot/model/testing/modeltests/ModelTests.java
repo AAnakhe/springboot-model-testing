@@ -43,7 +43,7 @@ public class ModelTests {
     }
 
     @Test
-    public void testFindByName() {
+    public void testFindCustomerByName() {
         Customer customer1 = new Customer();
         customer1.setName("John");
         customerRepository.save(customer1);
@@ -71,7 +71,7 @@ public class ModelTests {
 
 
     @Test
-    void testSaveOrderWithInvalidCustomer() {
+    void testSaveValidOrderToRepository() {
         Customer customer = new Customer("John", "Doe", "john.doe@example.com");
         Order order = new Order(customer, "Notebook", 9, new Date());
 

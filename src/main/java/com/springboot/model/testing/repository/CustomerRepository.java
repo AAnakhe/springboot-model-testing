@@ -9,6 +9,4 @@ import org.springframework.data.jpa.repository.Query;
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
     @Query("SELECT c FROM Customer c WHERE c.name = :name")
     Page<Customer> findByNameLimitedToOne(String name, Pageable pageable);
-
-
 }
